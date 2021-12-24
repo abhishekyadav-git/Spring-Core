@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+    <!-- standard bean declaration -->
+    <bean class = "com.springcore.Student" name = "student1">
+    		<property name = "studentId">
+    			<value>001</value>
+    		</property>
+    		
+    		<property name = "studentName">
+    			<value>Ram</value>
+    		</property>
+    		
+    		<property name = "studentAddress">
+    			<value>Noida</value>
+    		</property>
+    </bean>
+    
+    <!-- value as a attribute instead of tag -->
+    <bean class = "com.springcore.Student" name = "student2">
+    		<property name = "studentId"  value = "002" />
+    		<property name = "studentName"  value = "Shyam" />
+    		<property name = "studentAddress"  value = "Delhi" />
+    </bean>
+    
+    <!-- p namespace  : replacement of <property/> tag inside bean tag (we have to add p schema to use it)-->
+    
+    <bean class = "com.springcore.Student" name = "student3"  p:studentId="003" p:studentName = "Ghan Shyam" p:studentAddress = "Goa"/>
+   
+    
+    
+</beans>   
