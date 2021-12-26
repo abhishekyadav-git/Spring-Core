@@ -1,8 +1,8 @@
 # Spring-Core
 Code Contains:
-Spring core Setter Injection, 
-Types of bean tags,
-Application Output:
-Student [studentId=1, studentName=Ram, studentAddress=Noida]
-Student [studentId=2, studentName=Shyam, studentAddress=Delhi]
-Student [studentId=3, studentName=Ghan Shyam, studentAddress=Goa]
+- package : com.springcore : Setter Injection, property tag standard, property tag with value as attribute, property tag using p schema
+- package : com.springcore.collections : Collection setter injection
+- package : com.springcore.ref : Reference type setter injection (User Defined)
+- package : com.springcore.lifecycle: Understanding LifeCycle of bean (init , destroy) using bean, implementing interfaces InitializingBean,DisposableBean and annotation based     (@PostConstruct and @PreDestroy)
+
+
