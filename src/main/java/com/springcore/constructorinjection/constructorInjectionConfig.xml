@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+    
+   <bean class = "com.springcore.constructorinjection.Certificate" name = "cert">
+   		<constructor-arg value="AWS Developer Associate" />
+   </bean> 
+   
+   <bean class = "com.springcore.constructorinjection.Person" name = "person">
+   		<!-- We have type tag to avoid confusing IOC ,if we are doing constructor chaining -->
+   		<constructor-arg value="Ram" type="String"/>
+   		<constructor-arg value="Analyst" />
+   		<constructor-arg ref="cert" />
+   		<constructor-arg>
+   			<list>
+   				<value>Java</value>
+   				<value>Spring Core</value>
+   				<value>SQL</value>
+   			</list>
+   		</constructor-arg>
+   		
+   </bean>
+   
+    
+    
+</beans>   

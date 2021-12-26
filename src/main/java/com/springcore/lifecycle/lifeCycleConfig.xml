@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"  
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    
+   <context:annotation-config /> <!-- Enables all annotation -->
+   <bean class = "com.springcore.lifecycle.Virus"  name = "virus" init-method="init" destroy-method="destroy">
+   		<property name="virusName" value="covid 19"/>
+   		<property name="variant" value="Omicron"/>
+   </bean>
+   
+    <bean class = "com.springcore.lifecycle.Vaccine"  name = "vaccine">
+   		<property name="name" value="covishield"/>
+   </bean>
+    
+     <bean class = "com.springcore.lifecycle.AnnotationBasedLifeCycle"  name = "annotationBased">
+   		<property name="name" value="PostConstruct and PreDestroy"/>
+   </bean>
+</beans>   
